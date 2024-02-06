@@ -42,26 +42,7 @@ const Footer = () => {
               consectetur adipisicing elit. Possimus, voluptate.{" "}
             </p>
             <br />
-            <div className="flex items-center gap-3">
-              <FaLocationArrow />
-              <p>Noida, Uttar Pradesh</p>
-            </div>
-            <div className="flex items-center gap-3 mt-3">
-              <FaMobileAlt />
-              <p>+91 123456789</p>
-            </div>
-            {/* Social Handle */}
-            <div className="flex items-center gap-3 mt-6">
-              <a href="#">
-                <FaInstagram className="text-3xl" />
-              </a>
-              <a href="#">
-                <FaFacebook className="text-3xl" />
-              </a>
-              <a href="#">
-                <FaLinkedin className="text-3xl" />
-              </a>
-            </div>
+            
           </div>
           {/* Links */}
           <div className="grid grid-cols-2 sm:grid-cols-3 col-span-2 md:pl-10 ">
@@ -95,6 +76,7 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
+
             <div className="">
               <div className="py-8 px-4 ">
                 <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">
@@ -110,12 +92,13 @@ const Footer = () => {
                   ))}
                 </ul>
               </div>
+              
             </div>
           </div>
         </div>
         <div>
           <div className="text-center py-10 border-t-2 border-gray-300/50">
-            @copyright 2024 All rights reserved || Made with ❤️ by Dilshad
+            Made By Kidus Abebe
           </div>
         </div>
       </section>
