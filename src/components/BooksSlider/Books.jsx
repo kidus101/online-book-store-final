@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Book1 from "../../assets/books/book1.jpg";
 import Book2 from "../../assets/books/book2.jpg";
 import Book3 from "../../assets/books/book3.jpg";
-import { FaStar } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const booksData = [
   {
@@ -84,10 +84,16 @@ const booksData = [
     Price: "$25",
     author: "Don Miguel Ruiz",
     tag: "Self-help",
-  }
+  },
 ];
 
 const Books = () => {
+  const [search, setSearch] = useState('');
+
+  const handleInputChange = (event) => {
+    setSearch(event.target.value);
+  };
+
   return (
     <>
       <div className="mt-14 mb-12">
@@ -99,34 +105,53 @@ const Books = () => {
 
           {/* Body section */}
           <div>
+          <input
+                type="text"
+                onChange={(e) => setSearch(e.target.value)}
+                
+                placeholder="Enter your search term"
+                className="border border-black mb-10"
+              />
             <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 place-items-center gap-5">
               {/* Card */}
-              {booksData.map(({ id, img, title, Price, author , tag  }) => (
-                <div
-                  key={id}
-                  className=" border border-gray-200 shadow-lg px-10 div space-y-2"
-                >
-                  <img
-                    src={img}
-                    alt=""
-                    className="h-[220px] mt-4 w-[150px] object-cover rounded-md"
-                  />
-                  <div>
-                    <h3 className="font-semibold">{title}</h3>
-                    <p className="text-sm text-gray-700">{author}</p>
-                    <div className="flex ml-8 mt-1 items-center gap-1">
-                      <span className=" ">{Price}</span>
-                    </div>
-                    <div className="flex ml-4 mt-1 items-center gap-1">
-                      <span className=" font-bold text-lg ">{tag}</span>
-                    </div>
 
-                    <button className="bg-primary hover:scale-105 mb-4 duration-300 text-white py-1 px-4 rounded-full mt-4 group-hover:bg-white group-hover:text-primary">
-                      Order Now
-                    </button>
-                  </div>
-                </div>
-              ))}
+              {booksData
+                .filter((item) => {
+                  const searchTerm = search.toLowerCase();
+                  const titleMatches = item.title.toLowerCase().includes(searchTerm);
+                  const authorMatches = item.author.toLowerCase().includes(searchTerm);
+                  const tagMatches = item.tag.toLowerCase().includes(searchTerm);
+
+                  return searchTerm === "" || tagMatches || titleMatches || authorMatches;
+                })
+                .map(({ id, img, title, Price, author, tag }) => (
+                  <Link to={`/books/${id}`}>
+                    <div
+                      key={id}
+                      className=" border border-gray-200 shadow-lg px-10 div space-y-2"
+                    >
+                      <img
+                        src={img}
+                        alt=""
+                        className="h-[220px] mt-4 w-[150px] object-cover rounded-md"
+                      />
+                      <div>
+                        <h3 className="font-semibold">{title}</h3>
+                        <p className="text-sm text-gray-700">{author}</p>
+                        <div className="flex ml-8 mt-1 items-center gap-1">
+                          <span className=" ">{Price}</span>
+                        </div>
+                        <div className="flex ml-4 mt-1 items-center gap-1">
+                          <span className=" font-bold text-lg ">{tag}</span>
+                        </div>
+
+                        <button className="bg-primary hover:scale-105 mb-4 duration-300 text-white py-1 px-4 rounded-full mt-4 group-hover:bg-white group-hover:text-primary">
+                          Order Now
+                        </button>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
             </div>
             {/* <div className="flex justify-center">
               <button className="text-center mt-10 cursor-pointer  bg-primary text-white py-1 px-5 rounded-md">

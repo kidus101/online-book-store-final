@@ -46,10 +46,10 @@ const Navbar = ({ handleOrderPopup }) => {
                 </li>
                 <li className="group relative cursor-pointer">
                   <a
-                    href="/login"
+                    href="/sign-in"
                     className="flex  items-center gap-[2px] bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white py-1 px-4 rounded-full"
                   >
-                   Login
+                   SignIn
                   </a>
                 </li>
               </ul>
