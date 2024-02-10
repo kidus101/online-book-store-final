@@ -22,9 +22,10 @@ const SignIn = () => {
                   htmlFor="email"
                   className="block mb-2 text-sm font-medium text-gray-900"
                 >
-                  Your email
+                    Your email
                 </label>
                 <input
+                
                   type="email"
                   name="email"
                   id="email"
