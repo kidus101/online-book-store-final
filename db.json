@@ -1,0 +1,82 @@
+[
+     {
+      "id": 1,
+      "img": "https://images-na.ssl-images-amazon.com/images/I/51Ga5GuElyL._AC_SX184_.jpg",
+      "title": "The Power of Now",
+      "Price": 15,
+      "author": "Eckhart Tolle",
+      "tag": "Non-fiction"
+    },
+    {
+      "id": 2,
+      "img": "https://images-na.ssl-images-amazon.com/images/I/51Ga5GuElyL._AC_SX184_.jpg",
+      "title": "Atomic Habits",
+      "Price": 20,
+      "author": "James Clear",
+      "tag": "Self-help"
+    },
+    {
+      "id": 3,
+      "img": "https://images-na.ssl-images-amazon.com/images/I/51Ga5GuElyL._AC_SX184_.jpg",
+      "title": "The Alchemist",
+      "Price": 25,
+      "author": "Paulo Coelho",
+      "tag": "Fiction"
+    },
+    {
+      "id": 4,
+      "img": "https://images-na.ssl-images-amazon.com/images/I/51Ga5GuElyL._AC_SX184_.jpg",
+      "title": "Think and Grow",
+      "Price": 25,
+      "author": "Napoleon Hill",
+      "tag": "Non-fiction"
+    },
+    {
+      "id": 5,
+      "img": "https://images-na.ssl-images-amazon.com/images/I/51Ga5GuElyL._AC_SX184_.jpg",
+      "title": "You Are a Badass",
+      "Price": 10,
+      "author": "Jen Sincero",
+      "tag": "Self-help"
+    },
+    {
+      "id": 6,
+      "img": "https://images-na.ssl-images-amazon.com/images/I/51Ga5GuElyL._AC_SX184_.jpg",
+      "title": "Deep Work",
+      "Price": 12,
+      "author": "Cal Newport",
+      "tag": "Non-fiction"
+    },
+    {
+      "id": 7,
+      "img": "https://images-na.ssl-images-amazon.com/images/I/51Ga5GuElyL._AC_SX184_.jpg",
+      "title": "Ikigai",
+      "Price": 27,
+      "author": "Carol S. Dweck",
+      "tag": "Non-fiction"
+    },
+    {
+      "id": 8,
+      "img": "https://images-na.ssl-images-amazon.com/images/I/51Ga5GuElyL._AC_SX184_.jpg",
+      "title": "Daring Greatly",
+      "Price": 5,
+      "author": "Brené Brown",
+      "tag": "Self-help"
+    },
+    {
+      "id": 9,
+      "img": "https://images-na.ssl-images-amazon.com/images/I/51Ga5GuElyL._AC_SX184_.jpg",
+      "title": "Eat Pray Love",
+      "Price": 10,
+      "author": "Elizabeth Gilbert",
+      "tag": "Non-fiction"
+    },
+    {
+      "id": 10,
+      "img": "https://images-na.ssl-images-amazon.com/images/I/51Ga5GuElyL._AC_SX184_.jpg",
+      "title": "The Four Agreements",
+      "Price": 25,
+      "author": "Don Miguel Ruiz",
+      "tag": "Self-help"
+    }
+  ]
